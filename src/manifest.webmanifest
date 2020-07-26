@@ -1,0 +1,17 @@
+{
+  "name": "Hacker-News",
+  "short_name": "Hacker-News",
+  "theme_color": "#FFFFFF",
+  "background_color": "#f6f6ef",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "assets/grayarrow.gif",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}

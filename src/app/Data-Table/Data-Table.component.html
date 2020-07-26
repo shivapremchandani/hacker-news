@@ -1,0 +1,20 @@
+<ngx-spinner></ngx-spinner>
+<main class="Data-container">
+<section class="table-data">
+    <div class="d-flex hacker-detail hacker-header ">
+        <div class="d-flex hacker-news-comments"><span class="">Comments</span></div>
+        <div class="d-flex hacker-news-votes"><span>Vote Count</span></div>
+        <div class="d-flex hacker-detail--upvote"><span>UpVote</span></div>
+        <div class="d-flex hacker-news"><span>News Details</span></div>
+        <div class="mobile-hidden">Hacker News</div>
+    </div>
+    <ng-container *ngFor="let news of graphDataShow">
+        <div class="row-data">
+            <app-row (listDataCall) = 'listData($event)' [rowData] = 'news'></app-row>
+        </div>
+    </ng-container>
+    <app-pagination class="pag-buttons" [dataPages] = 'dataPages' (datadataPages) = 'updateData($event)'></app-pagination>
+</section>
+
+<app-Votes-ID-Graph #dataGraphShow *ngIf = 'graphDataShow.length > 0' [graphDataShow] = 'graphDataShow'></app-Votes-ID-Graph>
+</main>

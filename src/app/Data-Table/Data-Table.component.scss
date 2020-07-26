@@ -1,0 +1,114 @@
+$color-primary: #ff6600;
+.row-data{
+    &:nth-child(odd){
+        background-color: #e6e6e6;
+    }
+    &:nth-child(even){
+      background-color: rgb(246, 246, 239);
+  }
+}
+.hacker-detail.hacker-header {
+  background: #ff6600;
+  color: #fff;
+  vertical-align: text-bottom;
+}
+.table-data{
+    border-bottom: 3px solid $color-primary;
+    margin-bottom: 10px;
+    &-header {
+        background-color: $color-primary;
+        color: #ffffff;
+    }
+}
+
+.Data-container{
+    padding-bottom: 10px;
+    border-bottom: 5px solid $color-primary;
+    width: 90%;
+    margin: 0 auto;
+}
+.hacker-detail div {
+  padding: 4px 0;
+  min-height: auto;
+}
+.hacker-detail{
+    height: auto;
+    align-items: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+        &--comments-count, &--votes, &--upvote{
+            flex: 0 0 7%;
+            max-width: 7%;
+            justify-content: center;
+            text-align: center;
+        }
+        &--details{
+            flex: 0 0 73%;
+            max-width: 79%;
+            align-items: center;
+        }
+        img{
+          width: 13px;
+          height: 13px;
+        }
+}
+
+.pag-buttons {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background: #f6f6ef;
+}
+
+.c-pointer{
+    cursor: pointer;
+  }
+
+.fs{
+    &-l{
+        font-size: 1.25rem;
+    }
+    &-s{
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 768px){
+    .hacker-detail{
+        height: 100%;
+        align-items: center;
+        padding: 10px 15px;
+        flex: 0 0 100%;
+        flex-wrap: wrap-reverse;
+        max-width: 100%;
+            &--comments-count, &--votes, &--upvote{
+                justify-content: flex-start;
+                margin-top: 10px;
+                flex: 0 0 8%;
+                max-width: 8%;
+                margin-top: 0;
+            }
+            &--details{
+                flex: 0 0 90%;
+                max-width: 90%;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+    }
+    .Data-container{
+      width: 100%;
+    }
+}
+@media (max-width: 1024px){
+  .Data-container{ width: 100%;}
+}
+
+@media (max-width: 480px){
+.hacker-detail.hacker-data {
+    justify-content: space-around;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+}

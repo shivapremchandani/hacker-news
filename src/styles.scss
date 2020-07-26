@@ -1,0 +1,133 @@
+body{
+    background-color:#f6f6ef;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10pt;
+    margin: 0;
+}
+
+.d {
+    &-flex {
+        display: flex;
+    }
+}
+.hacker-news-comments {
+  text-align: center;
+  justify-content: center;
+}
+.hacker-news-votes {
+  justify-content: center;
+}
+.hacker-data .hacker-news-comments {
+  width: 7%;
+}
+.hacker-data  .hacker-detail--upvote {
+  width: 5%;
+}
+.hacker-data .hacker-news-votes{
+  width: 2%;
+}
+.hacker-header .hacker-news-comments {
+  width: 9%;
+}
+.hacker-data .hacker-news-comments {
+  width: 9%;
+}
+.hacker-header .hacker-news-votes {
+  width: 3%;
+}
+.hacker-data .hacker-detail--upvote {
+  max-width: none;
+  flex: 0 0 9%;
+}
+.hacker-news {
+  flex: 0 0 80%;
+}
+button {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    &:disabled{
+        opacity: 0.7;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+button:focus{
+  outline: 0;
+}
+canvas#canvas{
+  height: 400px !important;
+  background: #f6f6ef !important;
+}
+.mobile-hidden{
+  display: none;
+}
+@media (max-width: 768px){
+  .hacker-header .hacker-news-comments {
+    width: 12%;
+  }
+  .hacker-header .hacker-news-votes {
+    width: 7%;
+}
+.hacker-data .hacker-news-comments {
+  width: 13%;
+}
+.hacker-data .hacker-news-votes {
+  width: 5%;
+}
+.hacker-news {
+  flex: 0 0 70%;
+}
+.hacker-detail--upvote {
+  flex: 0 0 8%;
+  max-width: 9%;
+}
+}
+@media (max-width: 480px){
+  .mobile-hidden{
+    display: block;
+  }
+  .hacker-detail.hacker-header div{
+    display: none;
+  }
+  .hacker-detail.hacker-header .mobile-hidden{
+    display: block;
+    font-size: 30px;
+  }
+  .hacker-detail.hacker-data div{
+    width: 100%;
+    flex: 0 0 100%;
+  }
+  .hacker-detail.hacker-data div span.mobile-Hidden {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    color: #ff6600;
+}
+.hacker-detail--upvote {
+  margin: 0;
+}
+.hacker-data .hacker-detail--upvote {
+  margin: 0;
+}
+button#upvote-news {
+  padding: 0;
+}
+.hacker-detail.hacker-data div{
+  text-align: center;
+}
+.graphContainer {
+  width: 85%;
+}
+.hacker-news {
+  word-break: break-all;
+}
+.hacker-detail.hacker-data div span.mobile-hidden {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+}
+}

@@ -1,0 +1,31 @@
+<div class='d-flex hacker-detail hacker-data'>
+    <div *ngIf="rowData" class="d-flex hacker-news-comments">
+      <span class="mobile-hidden">Comments</span>
+      <span class="">{{rowData.num_comments}} </span></div>
+    <div *ngIf="rowData" class="d-flex hacker-news-votes">
+      <span class="mobile-hidden">Vote Count</span>
+      <span class="">{{rowData.points}}</span></div>
+    <div class="d-flex hacker-detail--upvote">
+      <span class="mobile-hidden">UpVote</span>
+        <button role="button" tabindex="0" title="upvote news" id="upvote-news" class="c-pointer" (click)="updateRow('upvote')"><img src="assets/grayarrow.gif" alt="upvote"></button>
+    </div>
+    <div class="d-flex hacker-news">
+        <span class=" ">{{rowData.title}}&nbsp;
+        <span>
+            <a class="textColor" [href]="rowData.url" rel="noopener" target="_blank" role="link"><span>&nbsp;({{modifiedURL}})&nbsp;</span></a>
+            <span class="textColor">&nbsp;by&nbsp;</span>
+            <span class="">&nbsp;{{rowData.author}}&nbsp;</span>
+        </span>
+        <span>
+        </span>
+            <span class="textColor" *ngIf = 'rowData && hackerDataDays.days > 365 && hackerDataDays.months > 12'>&nbsp;{{ hackerDataDays.years }}&nbsp;years ago&nbsp;</span>
+            <span class="textColor" *ngIf = 'rowData && hackerDataDays.days > 365 && hackerDataDays.months <= 12'>&nbsp;{{ hackerDataDays.months }}&nbsp;months ago&nbsp;</span>
+            <span class="textColor" *ngIf = 'rowData && hackerDataDays.days <= 365 && hackerDataDays.months <= 1'>&nbsp;{{ hackerDataDays.days }}&nbsp;days ago&nbsp;</span>
+            <span><span class="textColor">[&nbsp;</span><button role="button" title="hide news" tabindex="0" id="hide-news" class="c-pointer " (click)="updateRow('hide')">hide</button><span class="textColor">&nbsp;]</span></span>
+        </span>
+    </div>
+</div>
+
+<div *ngIf="!rowData" >
+  Data Not Avilable
+  </div>

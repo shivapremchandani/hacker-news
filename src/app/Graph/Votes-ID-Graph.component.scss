@@ -1,0 +1,40 @@
+.graphContainer {
+    position: relative;
+    width:96%;
+    margin:auto;
+    background: #fff;
+    .y-axis-label{
+        position: absolute;
+        transform: rotate(-90deg) translateY(-50%);
+        top: 37%;
+        left: -20px;
+        font-weight: bold;
+    }
+    .x-axis-label{
+        justify-content: center;
+        font-weight: bold;
+        background: #f6f6ef;
+    }
+}
+
+@media (max-width: 768px){
+    .graphContainer {
+        width: 90vw;
+        .y-axis-label{
+            font-size: 0.75rem !important;
+            left: 0;
+            top: 30%;
+        }
+        .x-axis-label{
+            font-size: 0.75rem !important;
+        }
+    }
+}
+@media (max-width: 768px){
+  .graphContainer {
+    width: 96%;
+    .y-axis-label{
+      left: -3%;
+  }
+  }
+}
