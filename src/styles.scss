@@ -42,6 +42,11 @@ body{
 .hacker-news {
   flex: 0 0 80%;
 }
+.hacker-header .hacker-detail--upvote {
+  flex: 0 0 8%;
+  max-width: none;
+}
+
 button {
     background: transparent;
     border: 0;
